@@ -99,6 +99,7 @@ function IntroContainer() {
 
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
+    updateWidth();
     fetchCountries();
     return () => window.removeEventListener("resize", updateWidth);
   }, []);

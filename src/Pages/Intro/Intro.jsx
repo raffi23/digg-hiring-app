@@ -26,7 +26,14 @@ function Intro({
     <PageContainer fullWidth="true" center="true">
       <IntroLeftContainer>
         <SectionContainer gap="true" contain="true">
-          <Heading large="true" style={{ color: "white", fontSize: 52 }}>
+          <Heading
+            large="true"
+            style={{
+              color: "white",
+              fontSize: 52,
+              fontFamily: "IBM Plex Sans, sans-serif",
+            }}
+          >
             digg
           </Heading>
           <Image src={ManImage} alt="man" />
