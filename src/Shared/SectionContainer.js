@@ -16,6 +16,7 @@ import { colors, containerSpacing, elementSpacing } from "./SharedStyles";
   react component props:
 
   row: switch flex to row
+  center: centers direct elements
   contain: adds padding by 20px
   scontain: adds padding by 10px
   gap: adds gap between elements by 20px
@@ -26,7 +27,10 @@ import { colors, containerSpacing, elementSpacing } from "./SharedStyles";
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.row ? "row" : "column")};
-  align-items: ${(props) => props.row && "center"};
+  justify-content: ${(props) => props.center && "center"};
+  justify-content: ${(props) => props.left && "flex-start"};
+  justify-content: ${(props) => props.right && "flex-end"};
+  align-items: ${(props) => props.center && "center"};
   padding: ${(props) => props.contain && containerSpacing};
   padding: ${(props) => props.scontain && elementSpacing};
   gap: ${(props) => props.gap && containerSpacing};

@@ -17,15 +17,14 @@ import { containerSpacing } from "./SharedStyles";
   fullWidth: adds 100% width, if not specified defaults to 90% and adds margin to keep page centered
 */
 
-const PageContainer = styled.div`
+export const PageContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.column ? "column" : "row")};
   justify-content: ${(props) => props.center && "center"};
+  align-items: ${(props) => props.center && "center"};
   margin: ${(props) => !props.fullWidth && `${containerSpacing} auto`};
   padding: ${(props) => (props.contain ? `${containerSpacing}` : "0")};
   width: ${(props) => (props.fullWidth ? "100%" : "90%")};
   max-width: 1400px;
   min-height: 84vh;
 `;
-
-export default PageContainer;

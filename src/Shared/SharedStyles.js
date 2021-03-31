@@ -16,6 +16,9 @@ export const colors = {
   darkRed: "#EE3D3D",
   lightRed: "#F26565",
   darkGray: "#141212",
+  lightGray: "#EFEFEF",
+  textGray: "#141212",
+  textPurple: "#4C33E2",
 };
 
 export const windowSizes = {
