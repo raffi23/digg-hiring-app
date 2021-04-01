@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## digg-hiring-app
+
+run first
+
+### `npm install`
+
+fully custom no third-party layout libraries were used
+
+first step is complete
+
+project incomplete
+
 ## Available Scripts
 
 In the project directory, you can run:
