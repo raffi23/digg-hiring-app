@@ -25,7 +25,11 @@ function Intro({
   return (
     <PageContainer fullWidth="true" center="true">
       <IntroLeftContainer>
-        <SectionContainer gap="true" contain="true">
+        <SectionContainer
+          gap="true"
+          contain="true"
+          style={{ alignContent: "space-around" }}
+        >
           <Heading
             large="true"
             style={{
@@ -162,7 +166,7 @@ function Intro({
             error={userInputError.email}
           />
         </SectionContainer>
-        <SectionContainer row="true" right="true">
+        <SectionContainer row="true" right={!isMobile} left={isMobile}>
           <ForwardButton onClick={(e) => onNextStep(e)}>
             Apply now
           </ForwardButton>

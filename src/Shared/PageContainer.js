@@ -22,9 +22,10 @@ export const PageContainer = styled.div`
   flex-direction: ${(props) => (props.column ? "column" : "row")};
   justify-content: ${(props) => props.center && "center"};
   align-items: ${(props) => props.center && "center"};
-  margin: ${(props) => !props.fullWidth && `${containerSpacing} auto`};
+  margin: 0 auto;
   padding: ${(props) => (props.contain ? `${containerSpacing}` : "0")};
   width: ${(props) => (props.fullWidth ? "100%" : "90%")};
-  max-width: 1400px;
+  height: 100%;
+  max-width: 1920px;
   min-height: 84vh;
 `;

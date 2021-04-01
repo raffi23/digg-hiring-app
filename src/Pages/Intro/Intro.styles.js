@@ -4,8 +4,8 @@ import { colors, windowSizes } from "../../Shared/SharedStyles";
 export const IntroLeftContainer = styled.div`
   display: none;
   background: ${colors.oneTwentyDegGradient};
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   clip-path: polygon(0 0, 92% 0, 100% 30%, 90% 79%, 100% 100%, 0 100%);
 
   @media screen and (min-width: ${windowSizes.large}) {

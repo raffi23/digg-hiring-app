@@ -28,6 +28,7 @@ function IntroContainer() {
   });
   const [countries, setCountries] = useState([]);
 
+  // updates user input
   const onUserInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -39,6 +40,7 @@ function IntroContainer() {
     });
   };
 
+  // updates user input error messages
   const onUserInputErrorChange = ({ name, value }) => {
     setUserInputError((prev) => {
       return {
@@ -48,6 +50,8 @@ function IntroContainer() {
     });
   };
 
+  // validates user input and exits if validation was not saccessful
+  // if validation saccessful saves info to local storage JSON string
   const onNextStep = () => {
     let isValid = true;
 
@@ -91,12 +95,17 @@ function IntroContainer() {
     }
 
     if (!isValid) return;
+    // save to local storage
+    localStorage.setItem("step-one", JSON.stringify(userInput));
   };
 
+  // figures out if screen size is mobile size and returns boolean
   const updateWidth = () => {
     setIsMobile(window.innerWidth < parseInt(windowSizes.large));
   };
 
+  // on start adds event listner for window resize
+  // fetches countries and nationalities from a 3rd-party api
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     updateWidth();
