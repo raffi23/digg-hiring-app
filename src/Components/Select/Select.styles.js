@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: ${(props) => props.fullWidth && "100%"};
-  height: 50px;
+  height: 60px;
   background-color: ${colors.lightGray};
   border-radius: 3px;
   border: 1px solid transparent;
@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const InputLabel = styled.label`
   position: absolute;
-  top: ${(props) => (props.lift ? "10%" : "35%")};
+  top: ${(props) => (props.lift ? "10%" : "30%")};
   font-size: ${(props) => (props.lift ? "15px" : "18px")};
   color: ${(props) =>
     props.lift ? `${colors.textPurple}` : `${colors.textGray}`};

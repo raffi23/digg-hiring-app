@@ -8,6 +8,7 @@ import CheckBoxInput from "../../Components/CheckBoxInput/CheckBoxInput";
 import { ForwardButton } from "../../Shared/ForwardButton";
 import {
   IntroLeftContainer,
+  Brand,
   Image,
   Description,
   SubDescription,
@@ -27,19 +28,12 @@ function Intro({
       <IntroLeftContainer>
         <SectionContainer
           gap="true"
-          contain="true"
-          style={{ alignContent: "space-around" }}
+          style={{
+            justifyContent: "space-around",
+            height: "100%",
+            padding: "0 0 0 30px",
+          }}
         >
-          <Heading
-            large="true"
-            style={{
-              color: "white",
-              fontSize: 52,
-              fontFamily: "IBM Plex Sans, sans-serif",
-            }}
-          >
-            digg
-          </Heading>
           <Image src={ManImage} alt="man" />
           <Description>
             "Coming to Dubai with One Step Dubai has been the best decision of
@@ -52,6 +46,7 @@ function Intro({
         </SectionContainer>
       </IntroLeftContainer>
       <SectionContainer gap="true" contain="true">
+        <Brand>digg</Brand>
         <SectionContainer center="true">
           <Heading large="true">Apply now to work in Dubai</Heading>
         </SectionContainer>
@@ -83,7 +78,7 @@ function Intro({
             onChange={(e) => onUserInputChange(e)}
             error={userInputError.date}
           />
-          <SectionContainer sgap="true" style={{ padding: "5px 10px" }}>
+          <SectionContainer>
             <Heading>Gender:</Heading>
             <SectionContainer row="true" gap="true">
               <CheckBoxInput

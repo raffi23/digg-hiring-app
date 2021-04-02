@@ -3,5 +3,5 @@ import { colors } from "./SharedStyles";
 
 export const Heading = styled.label`
   color: ${colors.textGray};
-  font-size: ${(props) => (props.large ? "36px" : "22px")};
+  font-size: ${(props) => (props.large ? "26pt" : "18pt")};
 `;

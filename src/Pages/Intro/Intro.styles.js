@@ -13,22 +13,39 @@ export const IntroLeftContainer = styled.div`
   } ;
 `;
 
+export const Brand = styled.h1`
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 40pt;
+  margin: 0 0 40px 0;
+  color: black;
+  z-index: 100;
+
+  @media screen and (min-width: ${windowSizes.large}) {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    color: white;
+    margin: 0;
+  }
+`;
+
 export const Image = styled.img`
-  object-fit: cover;
-  width: 380px;
-  height: 398.4px;
+  object-fit: contain;
+  width: 480px;
+  height: 50vh;
+  margin: 10vh 0 0 0;
 `;
 
 export const Description = styled.p`
   color: white;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 12pt;
+  line-height: 40px;
   width: 80%;
 `;
 
 export const SubDescription = styled.h3`
   color: white;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 14pt;
+  line-height: 40px;
   width: 80%;
 `;
