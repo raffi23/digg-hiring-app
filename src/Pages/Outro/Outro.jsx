@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import { Button } from "../../Shared/Button";
 import { PageContainer } from "../../Shared/PageContainer";
 import { SectionContainer } from "../../Shared/SectionContainer";
 import { colors } from "../../Shared/SharedStyles";
@@ -78,6 +79,20 @@ function Outro({ questions, answers, onEdit }) {
                 </SectionContainer>
               );
             })}
+        </SectionContainer>
+        <SectionContainer sgap="true" row="true" scontain="true" wrap="true">
+          <Button varient="seconday" onClick={() => onEdit(6)}>
+            Back
+          </Button>
+          <Button
+            varient="primary"
+            onClick={() => {
+              localStorage.setItem("step-two", JSON.stringify(answers));
+              history.push("/");
+            }}
+          >
+            Complete Application
+          </Button>
         </SectionContainer>
       </SectionContainer>
     </PageContainer>

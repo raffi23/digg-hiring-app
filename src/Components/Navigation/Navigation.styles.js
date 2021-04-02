@@ -59,5 +59,5 @@ export const ProgressFill = styled.div`
   width: ${(props) => props.progress && props.progress};
   height: 18px;
   border-radius: 10px;
-  transition: width 200ms ease-in-out;
+  transition: width 600ms ease-in-out;
 `;

@@ -14,6 +14,9 @@ import {
   SubDescription,
 } from "./Intro.styles";
 import ManImage from "../../Images/man.svg";
+import { Shape } from "../../Shared/Shape";
+import BigYellowShape from "../../Images/Path 970.svg";
+import BigRedShape from "../../Images/Path 971.svg";
 
 function Intro({
   isMobile,
@@ -25,6 +28,22 @@ function Intro({
 }) {
   return (
     <PageContainer fullWidth="true" center="true">
+      <Shape
+        bg={BigYellowShape}
+        width="337.76px"
+        height="420.8px"
+        top="-220px"
+        left="27%"
+        zIndex={!isMobile && "99"}
+      />
+      <Shape
+        bg={BigRedShape}
+        width="337.76px"
+        height="420.8px"
+        bottom="-280px"
+        left="27%"
+        zIndex={!isMobile && "99"}
+      />
       <IntroLeftContainer>
         <SectionContainer
           gap="true"

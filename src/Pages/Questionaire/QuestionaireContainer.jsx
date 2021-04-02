@@ -3,8 +3,10 @@ import Questionaire from "./Questionaire";
 import axios from "axios";
 import Outro from "../Outro/Outro";
 import Navigation from "../../Components/Navigation/Navigation";
+import { useHistory } from "react-router";
 
 function QuestionaireContainer() {
+  const history = useHistory();
   const [progress, setProgress] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({
@@ -33,14 +35,15 @@ function QuestionaireContainer() {
               if (answers[index] === "") valid = false;
             });
             if (!valid) return state;
-            localStorage.setItem("step-two", JSON.stringify(answers));
             setValidated(true);
             return state;
           }
         }
+        break;
       case "PREV":
         if (!(state - 1 < 0)) return state - 1;
-        else return state;
+        else history.push("/");
+        return state;
       case "RESET":
         return 0;
       default:
@@ -77,6 +80,7 @@ function QuestionaireContainer() {
   useEffect(() => {
     setProgress((step / (questions?.length - 3)) * 100);
     window.scroll(0, 0);
+    // eslint-disable-next-line
   }, [step]);
 
   return (
