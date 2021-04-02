@@ -65,6 +65,7 @@ function Outro({ questions, answers, onEdit }) {
           contain="true"
           style={{ background: colors.lightGray }}
         >
+          <HeadingLabel>Questionaire</HeadingLabel>
           {questions?.length > 0 &&
             questions.map((question, index) => {
               return (
