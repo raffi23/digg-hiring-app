@@ -26,6 +26,7 @@ import { colors, containerSpacing, elementSpacing } from "./SharedStyles";
 
 export const SectionContainer = styled.div`
   display: flex;
+  flex-wrap: ${(props) => props.wrap && "wrap"};
   flex-direction: ${(props) => (props.row ? "row" : "column")};
   justify-content: ${(props) => props.center && "center"};
   justify-content: ${(props) => props.left && "flex-start"};
@@ -38,6 +39,7 @@ export const SectionContainer = styled.div`
   width: 100%;
   height: max-content;
   border: ${(props) => props.line && `1px solid ${colors.lightGray}`};
+  border-radius: ${(props) => props.round && `10px`};
   // Safari
   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     & > * {

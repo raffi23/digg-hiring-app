@@ -7,6 +7,7 @@ export const IntroLeftContainer = styled.div`
   width: 100%;
   height: 100%;
   clip-path: polygon(0 0, 92% 0, 100% 30%, 90% 79%, 100% 100%, 0 100%);
+  overflow-y: auto;
 
   @media screen and (min-width: calc(${windowSizes.medium} + 200px)) {
     display: block;

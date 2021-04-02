@@ -5,7 +5,7 @@ import Input from "../../Components/Input/Input";
 import Select from "../../Components/Select/Select";
 import { Heading } from "../../Shared/Heading";
 import CheckBoxInput from "../../Components/CheckBoxInput/CheckBoxInput";
-import { ForwardButton } from "../../Shared/ForwardButton";
+import { Button } from "../../Shared/Button";
 import {
   IntroLeftContainer,
   Brand,
@@ -48,13 +48,13 @@ function Intro({
       <SectionContainer
         gap="true"
         contain="true"
-        style={{ margin: "auto", overflow: "auto", maxHeight: "100%" }}
+        style={{ margin: "auto", overflowY: "auto", maxHeight: "100%" }}
       >
         <Brand>digg</Brand>
         <SectionContainer center="true">
           <Heading large="true">Apply now to work in Dubai</Heading>
         </SectionContainer>
-        <SectionContainer center="true" row={!isMobile} sgap="true">
+        <SectionContainer center="true" row={!isMobile} gap="true">
           <Input
             fullWidth="true"
             label="First Name"
@@ -72,7 +72,7 @@ function Intro({
             error={userInputError.lastName}
           />
         </SectionContainer>
-        <SectionContainer center="true" row={!isMobile} sgap="true">
+        <SectionContainer center="true" row={!isMobile} gap="true">
           <Input
             fullWidth="true"
             type="date"
@@ -102,7 +102,7 @@ function Intro({
             </SectionContainer>
           </SectionContainer>
         </SectionContainer>
-        <SectionContainer center="true" row={!isMobile} sgap="true">
+        <SectionContainer center="true" row={!isMobile} gap="true">
           <Select
             fullWidth="true"
             label="Nationality"
@@ -147,7 +147,7 @@ function Intro({
           </Select>
         </SectionContainer>
         <Heading>How we can contact you?</Heading>
-        <SectionContainer center="true" row={!isMobile} sgap="true">
+        <SectionContainer center="true" row={!isMobile} gap="true">
           <Input
             fullWidth="true"
             label="Contact Number"
@@ -166,9 +166,9 @@ function Intro({
           />
         </SectionContainer>
         <SectionContainer row="true" right={!isMobile} left={isMobile}>
-          <ForwardButton onClick={(e) => onNextStep(e)}>
+          <Button varient="primary" onClick={(e) => onNextStep(e)}>
             Apply now
-          </ForwardButton>
+          </Button>
         </SectionContainer>
       </SectionContainer>
     </PageContainer>

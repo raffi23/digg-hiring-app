@@ -3,8 +3,10 @@ import { windowSizes } from "../../Shared/SharedStyles";
 import Intro from "./Intro";
 import axios from "axios";
 import validator from "validator";
+import { useHistory } from "react-router";
 
 function IntroContainer() {
+  const history = useHistory();
   const [isMobile, setIsMobile] = useState(false);
   const [userInput, setUserInput] = useState({
     firstName: "",
@@ -57,11 +59,13 @@ function IntroContainer() {
 
     if (!validator.isLength(userInput.firstName, { min: 3, max: 20 })) {
       onUserInputErrorChange({ name: "firstName", value: "invalid name" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "firstName", value: "" });
     }
     if (!validator.isLength(userInput.lastName, { min: 3, max: 20 })) {
       onUserInputErrorChange({ name: "lastName", value: "invalid last name" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "lastName", value: "" });
     }
@@ -70,26 +74,31 @@ function IntroContainer() {
         name: "nationality",
         value: "invalid nationality",
       });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "nationality", value: "" });
     }
     if (!validator.isLength(userInput.country, { min: 1 })) {
       onUserInputErrorChange({ name: "country", value: "invalid country" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "country", value: "" });
     }
     if (!validator.isMobilePhone(userInput.number)) {
       onUserInputErrorChange({ name: "number", value: "invalid number" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "number", value: "" });
     }
     if (!validator.isEmail(userInput.email)) {
       onUserInputErrorChange({ name: "email", value: "invalid email" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "email", value: "" });
     }
     if (!validator.isDate(userInput.date)) {
       onUserInputErrorChange({ name: "date", value: "invalid date" });
+      isValid = false;
     } else {
       onUserInputErrorChange({ name: "date", value: "" });
     }
@@ -97,6 +106,7 @@ function IntroContainer() {
     if (!isValid) return;
     // save to local storage
     localStorage.setItem("step-one", JSON.stringify(userInput));
+    history.push("/step/2");
   };
 
   // figures out if screen size is mobile size and returns boolean
