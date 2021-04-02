@@ -45,7 +45,11 @@ function Intro({
           </SubDescription>
         </SectionContainer>
       </IntroLeftContainer>
-      <SectionContainer gap="true" contain="true">
+      <SectionContainer
+        gap="true"
+        contain="true"
+        style={{ margin: "auto", overflow: "auto", maxHeight: "100%" }}
+      >
         <Brand>digg</Brand>
         <SectionContainer center="true">
           <Heading large="true">Apply now to work in Dubai</Heading>

@@ -8,7 +8,7 @@ export const IntroLeftContainer = styled.div`
   height: 100%;
   clip-path: polygon(0 0, 92% 0, 100% 30%, 90% 79%, 100% 100%, 0 100%);
 
-  @media screen and (min-width: ${windowSizes.large}) {
+  @media screen and (min-width: calc(${windowSizes.medium} + 200px)) {
     display: block;
   } ;
 `;
@@ -20,7 +20,7 @@ export const Brand = styled.h1`
   color: black;
   z-index: 100;
 
-  @media screen and (min-width: ${windowSizes.large}) {
+  @media screen and (min-width: ${windowSizes.medium}) {
     position: fixed;
     top: 20px;
     left: 30px;
@@ -33,7 +33,7 @@ export const Image = styled.img`
   object-fit: contain;
   width: 480px;
   height: 50vh;
-  margin: 10vh 0 0 0;
+  margin: calc(40px + 40pt) 0 0 0;
 `;
 
 export const Description = styled.p`

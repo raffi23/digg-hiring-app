@@ -38,7 +38,6 @@ export const SectionContainer = styled.div`
   width: 100%;
   height: max-content;
   border: ${(props) => props.line && `1px solid ${colors.lightGray}`};
-  margin: auto;
   // Safari
   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     & > * {
