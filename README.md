@@ -1,18 +1,18 @@
-# Getting Started with Create React App
+# digg-hiring-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Is a concept hiring app to demonsrate react js implementation
 
-## digg-hiring-app
+## hosted on
 
-run first
+`https://digg-app.web.app/`
 
-### `npm install`
+On first run
 
-fully custom no third-party layout libraries were used
+-> `git clone https://github.com/raffi23/digg-hiring-app.git`
 
-first step is complete
+### -> `npm install`
 
-project incomplete
+Fully custom no third-party layout libraries were used
 
 ## Available Scripts
 
