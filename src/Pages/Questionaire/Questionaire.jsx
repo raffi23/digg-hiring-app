@@ -314,7 +314,7 @@ function Questionaire({
   }, [currentStep]);
 
   return (
-    <PageContainer fullWidth="true" contain="true" column="true">
+    <PageContainer fullWidth="true" column="true">
       <Shape
         bg={BigYellowShape}
         width={shapes.bYellow.width}

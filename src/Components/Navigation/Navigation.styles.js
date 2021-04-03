@@ -4,11 +4,10 @@ import { colors, windowSizes } from "../../Shared/SharedStyles";
 export const NavigationContainer = styled.nav`
   display: flex;
   flex-direction: column;
-  height: 30vh;
   min-height: 81px;
   width: 100%;
   padding: 0 20px;
-  margin: 0 0 120px 0;
+  margin: 0 0 4vh 0;
 
   @media screen and (min-width: ${windowSizes.medium}) {
     flex-direction: row;

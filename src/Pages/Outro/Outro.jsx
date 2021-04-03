@@ -13,6 +13,7 @@ function Outro({ questions, answers, onEdit }) {
 
   useEffect(() => {
     setForm(JSON.parse(localStorage.getItem("step-one")));
+    window.scroll(0, 0);
   }, []);
 
   return (
