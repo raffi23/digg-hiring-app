@@ -7,7 +7,9 @@ import { useHistory } from "react-router";
 
 function IntroContainer() {
   const history = useHistory();
+  // state to determine if we are on mobile or not
   const [isMobile, setIsMobile] = useState(false);
+  // user input data will be stored in userInput state
   const [userInput, setUserInput] = useState({
     firstName: "",
     lastName: "",
@@ -18,6 +20,7 @@ function IntroContainer() {
     nationality: "",
     date: new Date().toISOString().substring(0, 10),
   });
+  // user input data errors will be stored in userInputError state after validation
   const [userInputError, setUserInputError] = useState({
     firstName: "",
     lastName: "",

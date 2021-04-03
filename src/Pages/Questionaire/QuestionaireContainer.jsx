@@ -7,8 +7,11 @@ import { useHistory } from "react-router";
 
 function QuestionaireContainer() {
   const history = useHistory();
+  // keep track of questions progress
   const [progress, setProgress] = useState(0);
+  // fetched questions from server
   const [questions, setQuestions] = useState([]);
+  // user chosen answers
   const [answers, setAnswers] = useState({
     0: "",
     1: "",
@@ -20,8 +23,9 @@ function QuestionaireContainer() {
     7: "",
     8: "",
   });
+  // validation state to make sure user has already answered all questions
   const [validated, setValidated] = useState(false);
-
+  // reducer function to skip through questions
   const reducer = (state, action) => {
     switch (action.type) {
       case "EXACT":
@@ -50,9 +54,9 @@ function QuestionaireContainer() {
         return 0;
     }
   };
-
+  // a step state will determine current question selection
   const [step, setStep] = useReducer(reducer, 0);
-
+  // fetch questions from the server
   const fetchQuestions = async () => {
     try {
       const { data } = await axios.get(
@@ -63,7 +67,7 @@ function QuestionaireContainer() {
       console.log(error?.response);
     }
   };
-
+  // sets chosen answer by user
   const onSetAnswer = ({ index, answer }) => {
     setAnswers((prev) => {
       return {
@@ -74,11 +78,14 @@ function QuestionaireContainer() {
   };
 
   useEffect(() => {
+    // question fetch on view mount
     fetchQuestions();
   }, []);
 
   useEffect(() => {
+    // set progress on each step change
     setProgress((step / (questions?.length - 3)) * 100);
+    // then move to the top of the screen
     window.scroll(0, 0);
     // eslint-disable-next-line
   }, [step]);

@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import { colors } from "./SharedStyles";
 
+/* 
+action button
+
+props:
+
+varient:
+-> primary: 90deg linear gradient button
+-> secondary: gray styled button
+*/
+
 export const Button = styled.button`
   outline: none;
   border-radius: 50px;

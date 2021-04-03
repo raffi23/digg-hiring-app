@@ -8,13 +8,13 @@ import { containerSpacing } from "./SharedStyles";
 
   by default 
   
-  -> flex - column
+  -> flex - row
 
-  react component props:
+  props:
 
-  center: centers direct elements
-  contain: adds padding by 20px
-  fullWidth: adds 100% width, if not specified defaults to 90% and adds margin to keep page centered
+  -> center: centers direct elements
+  -> contain: adds padding by 20px
+  -> fullWidth: adds 100% width, else defaults to 90% and adds margin to keep page centered
 */
 
 export const PageContainer = styled.div`

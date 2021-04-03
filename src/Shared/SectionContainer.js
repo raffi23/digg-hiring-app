@@ -17,11 +17,15 @@ import { colors, containerSpacing, elementSpacing } from "./SharedStyles";
 
   row: switch flex to row
   center: centers direct elements
+  left: aligns elements to the left
+  right: aligns elements to the right
   contain: adds padding by 20px
   scontain: adds padding by 10px
   gap: adds gap between elements by 20px
   sgap: adds gap between elements by 10px
   line: adds border line
+  wrap: wraps content if overflow happens
+  round: adds border radius on all edges
 */
 
 export const SectionContainer = styled.div`

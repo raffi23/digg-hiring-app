@@ -1,6 +1,17 @@
 import React from "react";
 import { Container, InputLabel, InputText, InputError } from "./Input.styles";
 
+/*
+  type: input type
+  placeholder: placeholder for an empty component text
+  label: text to explain selection
+  value: current selection
+  fullWidth: determines if the component should take 100% of container width
+  name: state name
+  onChange: takes a function for on value changes
+  error: takes a text to display as an error
+*/
+
 function Input({
   fullWidth,
   label,

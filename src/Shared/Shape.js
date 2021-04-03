@@ -1,5 +1,21 @@
 import styled from "styled-components";
 
+/* 
+  a div that takes a background
+
+  by default 
+  
+  -> position: fixed
+  -> transition enabled for all properties
+
+  props:
+  -> bg: takes an image: has to be imported then injected
+  -> top, buttom, right, left: adjust element location on screen
+  -> width, height: adjust dimentions of the element
+  -> rotate: takes a rotation degree e.g: -50deg
+  -> zIndex: you can also adjust the element location on the layer
+*/
+
 export const Shape = styled.div`
   position: fixed;
   top: ${(props) => props.top && props.top};

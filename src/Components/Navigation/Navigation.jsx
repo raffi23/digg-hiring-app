@@ -8,6 +8,10 @@ import {
   ProgressView,
 } from "./Navigation.styles";
 
+/*
+  Navigation component takes one prop and it is the progress
+*/
+
 function Navigation({ progress }) {
   return (
     <NavigationContainer>
